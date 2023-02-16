@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h1>Task 4</h1>
+    <p>Click on the name</p>
+    <ul id="name">
+        <li>Abineswaran</li>
+        <li>Ayyappan</li>
+        <li>Arshath</li>
+        <li>Chenba</li>
+        <li>Darson</li>
+        <li>Edwin</li>
+        <li>Namrish</li>
+        <li>Naveen</li>
+        <li>Vimal</li>
+        <li>Sankar</li>
+    </ul>
+    <script>
+        const name = document.querySelector("#name");
+        console.log(name);
+        const friends = name.querySelectorAll("li");
+
+        for (let i = 0; i < friends.length; i++) {
+            friends[i].addEventListener("click", function () {
+                let word = friends[i].textContent;
+                console.log(word);
+                let firstLetter = word.charAt(0);
+
+                if (['A', 'E', 'I', 'O', 'U'].includes(firstLetter)) {
+                    friends[i].style.background = "red"
+                } else {
+                    friends[i].style.background = "green"
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

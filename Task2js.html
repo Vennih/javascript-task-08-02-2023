@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body>
+    <input id="text" type="text">
+    <div id="output"></div>
+    <script>
+        document.getElementById("text").addEventListener("input", myFun);
+        function myFun() {
+            document.getElementById("output").innerHTML = document.getElementById("text").value
+        }
+    </script>
+</body>
+
+</html>

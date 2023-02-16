@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body>
+    <h1> Task 3</h1>
+    <input id="text" type="text">
+    <p> Text will display on click</p>
+    <button id="btn">Click me</button>
+    <div id="output"></div>
+    <script>
+        document.getElementById("btn").addEventListener("click", myFun);
+        function myFun() {
+            document.getElementById("output").innerHTML = document.getElementById("text").value;
+            alert(document.getElementById("text").value);
+        }
+    </script>
+</body>
+
+</html>

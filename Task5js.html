@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h1>Task 5</h1>
+    <p>Click on the name</p>
+    <ol id="list">
+        <li>Ramachandran</li>
+        <li>Narayani</li>
+        <li>Jayan Keasav Vennih</li>
+        <li>Geethai Keasav Vennih</li>
+        <li>Nishanthini</li>
+        <li>Muthu</li>
+        <li>Meena</li>
+        <li>Surya</li>
+        <li>Eniya</li>
+        <li>Sobiya</li>
+    </ol>
+    <script>
+
+        const name = document.querySelector("#list");
+        // console.log(name)
+        const familyMembers = name.querySelectorAll("li");
+        // console.log(familyMembers)
+        // for loop to get the index of li tag
+        for (let i = 0; i < familyMembers.length; i++) {
+            // adding event listener to the li content
+            familyMembers[i].addEventListener("click", function () {
+                // function to find even or odd 
+                if (i % 2 === 0) {
+
+                    familyMembers[i].style.color = "red";
+
+                } else {
+                    familyMembers[i].style.color = "green";
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
